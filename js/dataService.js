@@ -18,10 +18,10 @@ app.service("mainService", function(){
   	}
   	return quotes;
   };
-  this.removeData = function(arr, remove) {
-  	var index;
-  	if((index = arr.indexOf(remove)) >= 0){
-		arr.splice(index, 1);
+  this.removeData = function(arr) {
+  	for (var i = 0; i < quotes.length; i++)
+  		if(arr === quotes[i].text){
+			quotes.splice(i, 1);
 	}
   };
 })

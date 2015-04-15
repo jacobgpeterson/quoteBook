@@ -11,7 +11,7 @@ app.controller("mainCtrl", function($scope, mainService){
 	};
 
 	$scope.removeQuotes = function(){
-		$scope.quotes = mainService.removeData($scope.inputBox);
+		mainService.removeData($scope.inputBox);
 	};
 
 });
